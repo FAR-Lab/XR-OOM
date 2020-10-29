@@ -21,7 +21,11 @@ public class MarkerManager : MonoBehaviour
 
     public long markerTimeout = 3000;
     private long _markerTimeout;
-     
+
+    private VarjoMarker CarCover;
+    GameObject CarCoverObj;
+
+
 
     private Transform markerTransform;
 
@@ -32,6 +36,9 @@ public class MarkerManager : MonoBehaviour
         absentIds = new List<long>();
         markerVisualizers = new Dictionary<long, MarkerVisualizer>();
         marker = new VarjoMarker();
+
+
+        CarCoverObj = Instantiate(markerPrefab);
     }
 
     void Update()
@@ -49,9 +56,19 @@ public class MarkerManager : MonoBehaviour
             int foundMarkers = VarjoMarkers.GetVarjoMarkers(out markers);
             if (markers.Count > 0)
             {
+
+                CarCover.pose.position = Vector3.zero;
+                CarCover.size = Vector3.zero;
+                CarCover.pose.rotation = Quaternion.Euler(Vector3.zero);
                 foreach (var marker in markers)
                 {
                     markerIds.Add(marker.id);
+                    CarCover.pose.position += marker.pose.position;
+                    CarCover.size += marker.size;
+                    CarCover.pose.rotation = marker.pose.rotation;
+
+                    Debug.Log(marker.pose.rotation.ToString() + marker.id.ToString());
+
                     if (markerVisualizers.ContainsKey(marker.id))
                     {
                         UpdateMarkerVisualizer(marker);
@@ -60,9 +77,11 @@ public class MarkerManager : MonoBehaviour
                     {
                         CreateMarkerVisualizer(marker);
                         VarjoMarkers.SetVarjoMarkerTimeout(marker.id, markerTimeout);
-                        
+                        //Debug.Log("Logging markerIds " + marker.id);
                     }
                 }
+                CarCover.pose.position /= markers.Count;
+                CarCover.size /= markers.Count;
 
                 if (markerTimeout != _markerTimeout)
                 {
@@ -96,17 +115,21 @@ public class MarkerManager : MonoBehaviour
                 markerVisualizers.Remove(id);
             }
         }
+
+        CarCoverObj.GetComponent<MarkerVisualizer>().SetMarkerData(CarCover);
+
+        
     }
 
     void CreateMarkerVisualizer(VarjoMarker marker)
     {
-        GameObject go = Instantiate(markerPrefab);
-        markerTransform = go.transform;
-        go.name = marker.id.ToString();
-        markerTransform.SetParent(xrRig);
-        MarkerVisualizer visualizer = go.GetComponent<MarkerVisualizer>();
-        markerVisualizers.Add(marker.id, visualizer);
-        visualizer.SetMarkerData(marker);
+       //GameObject go = Instantiate(markerPrefab);
+       //markerTransform = go.transform;
+       // go.name = marker.id.ToString();
+       //markerTransform.SetParent(xrRig);
+       //MarkerVisualizer visualizer = go.GetComponent<MarkerVisualizer>();
+       //markerVisualizers.Add(marker.id, visualizer);
+       //visualizer.SetMarkerData(marker);
     }
 
     void UpdateMarkerVisualizer(VarjoMarker marker)

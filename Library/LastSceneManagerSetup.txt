@@ -1,5 +1,5 @@
 sceneSetups:
 - path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Markers/Scenes/Markers.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
   isSubScene: 0
