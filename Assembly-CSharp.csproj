@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{096099C9-6851-7E98-A886-519634669AA8}</ProjectGuid>
+    <ProjectGuid>{56CD8359-234D-FFED-8CCE-BA43CDB62DF3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -670,97 +670,97 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Varjo.XR.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Varjo.XR.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Varjo.XR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Varjo.XR">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Varjo.XR.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Varjo.XR.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM_Alexandra_2020okt02/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.XR.Management.Samples.csproj">
-      <Project>{87D0EC22-0DC6-89A4-8BE2-C1BA69607F4B}</Project>
+      <Project>{57B0A8C3-2E33-54A6-D8F1-E69BD950C095}</Project>
       <Name>Unity.XR.Management.Samples</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Management.Samples.Editor.csproj">
-      <Project>{888F8E93-7DE1-A14E-A252-62A45FFB87D4}</Project>
+      <Project>{C87045AD-C4AE-2883-59C4-4B3F4B5235DD}</Project>
       <Name>Unity.XR.Management.Samples.Editor</Name>
     </ProjectReference>
   </ItemGroup>
