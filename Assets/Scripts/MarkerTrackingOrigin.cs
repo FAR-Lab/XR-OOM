@@ -25,7 +25,7 @@ public class MarkerTrackingOrigin : MonoBehaviour {
     }
 
     public void Update() {
-        if (VarjoEventManager.Instance.GetButtonDown(0) && VarjoMixedReality.IsMRAvailable()) {
+        if ((Input.GetKeyDown(KeyCode.Space) || VarjoEventManager.Instance.GetButtonDown(0)) && VarjoMixedReality.IsMRAvailable()) {
             bool enable = !VarjoMarkers.IsVarjoMarkersEnabled();
             VarjoMarkers.EnableVarjoMarkers(enable);
 
