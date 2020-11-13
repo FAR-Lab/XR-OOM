@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\InitialisingVarjoXR.cs" />
+    <Compile Include="Assets\MarkerManagerOrigin.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.3.1\Procedural Sky\Runtime\ProceduralSky\ProceduralSky.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.3.1\Procedural Sky\Runtime\ProceduralSky\ProceduralSkyRenderer.cs" />
     <Compile Include="Assets\Samples\Varjo XR Plugin\1.0.0\HDRP Samples\ControllerInput\Scripts\Controller.cs" />
@@ -85,10 +86,12 @@
     <Compile Include="Assets\Samples\Varjo XR Plugin\1.0.0\HDRP Samples\Shared\Scripts\RotateWithGaze.cs" />
     <Compile Include="Assets\Samples\Varjo XR Plugin\1.0.0\HDRP Samples\Shared\Scripts\Shoot.cs" />
     <Compile Include="Assets\Samples\Varjo XR Plugin\1.0.0\HDRP Samples\Shared\Scripts\Teleporter.cs" />
+    <Compile Include="Assets\Scripts\MarkerTrackingOrigin.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\VarjoMarkerManager.cs" />
     <Compile Include="Assets\Scripts\VarjoXRInit.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\VSTMask.cs" />
     <Compile Include="Assets\Varjo\Samples\Scripts\Events\VarjoDisableObjectsWhenHidden.cs" />
     <Compile Include="Assets\Varjo\Samples\Scripts\Events\VarjoEvents.cs" />
     <Compile Include="Assets\Varjo\Samples\Scripts\Events\VarjoTrackingReset.cs" />
