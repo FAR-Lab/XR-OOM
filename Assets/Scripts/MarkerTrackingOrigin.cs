@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Varjo.XR;
 
+
+
+
+
+
 public class MarkerTrackingOrigin : MonoBehaviour {
     public static MarkerTrackingOrigin Instance { get; private set; } = null;
     public float lerpRate = 2.0f;
@@ -14,14 +19,29 @@ public class MarkerTrackingOrigin : MonoBehaviour {
     public delegate void MarkersDisabled();
     public static MarkersDisabled OnMarkersDisabledEvent;
 
-    public GameObject rootMarker;
+    public Transform rootMarker;
 
     private Vector3 _averagePosition;
     private Quaternion _averageRotation;
     private List<VarjoMarker> _markers = new List<VarjoMarker>();
+    
+    
+    public Dictionary<long, Vector3> MarkerOffsets = new Dictionary<long, Vector3>();
+
+    public long MarkerA;
+    public long MarkerB;
+
 
     private void Awake() {
         Instance = this;
+    }
+    private void Start()
+    {
+        VarjoMarkers.EnableVarjoMarkers(true);
+
+        MarkerOffsets.Add(310, new Vector3(-0.3f, 0.3f, 0));
+        MarkerOffsets.Add(309, new Vector3(0.3f, -0.3f, 0));
+
     }
 
     public void Update() {
@@ -35,13 +55,13 @@ public class MarkerTrackingOrigin : MonoBehaviour {
                 OnMarkersDisabledEvent();
 
             if (VarjoMarkers.GetVarjoMarkerCount() > 0) {
-                rootMarker.SetActive(true);
+                rootMarker.gameObject.SetActive(true);
             }
         }
 
 
         if (!VarjoMarkers.IsVarjoMarkersEnabled()) {
-            rootMarker.SetActive(!disableWhenMarkerNotVisible);
+            rootMarker.gameObject.SetActive(!disableWhenMarkerNotVisible);
             return;
         }
 
@@ -53,16 +73,47 @@ public class MarkerTrackingOrigin : MonoBehaviour {
             _averagePosition = Vector3.zero;
             _averageRotation = Quaternion.identity;
 
-            foreach(var marker in _markers) {
-                _averagePosition += marker.pose.position;
-                _averageRotation = marker.pose.rotation;
+            bool MarkerAAvail=false;
+            bool MarkerBAvail=false;
+            Vector3 MarkerAPos = Vector3.zero;
+            Vector3 MarkerBPos = Vector3.zero;
+            foreach (var marker in _markers) {
+                if (MarkerOffsets.ContainsKey(marker.id))
+                {
+                    _averagePosition += marker.pose.position - MarkerOffsets[marker.id];
+                    _averageRotation = marker.pose.rotation;
+                    //Debug.Log(marker.id);
+                }
+                if (marker.id == MarkerA)
+                {
+                    MarkerAAvail = true;
+                    MarkerAPos = marker.pose.position;
+                }
+                else if (marker.id == MarkerB)
+                {
+                    MarkerBAvail = true;
+                    MarkerBPos = marker.pose.position;
+                }
             }
-            _averagePosition /= _markers.Count;
+            Vector3 Forward = Vector3.zero;
+            if (MarkerAAvail && MarkerBAvail)
+            {
 
+                Vector3 WidthVector = MarkerBPos - MarkerAPos;
+                WidthVector.y = 0;
+                Forward = Vector3.Cross(Vector3.up, WidthVector);
+
+            }
+
+
+            _averagePosition /= _markers.Count;
+           // Debug.Log(_averagePosition.ToString() + ": pos and Marker count" + _markers.Count.ToString());
+           
             Vector3 euler = _averageRotation.eulerAngles;
 
-            transform.position = Vector3.Lerp(transform.position, _averagePosition, Time.deltaTime * lerpRate);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0f, euler.y, 0f), Time.deltaTime * lerpRate);
+            rootMarker.position = Vector3.Lerp(rootMarker.position, _averagePosition, Time.deltaTime * lerpRate);
+            //rootMarker.rotation = Quaternion.Lerp(rootMarker.rotation, Quaternion.Euler(0f, euler.y, 0f), Time.deltaTime * lerpRate);
+            rootMarker.rotation = Quaternion.Lerp(rootMarker.rotation, Quaternion.FromToRotation(rootMarker.forward, Forward), Time.deltaTime* lerpRate);
         }
     }
 }

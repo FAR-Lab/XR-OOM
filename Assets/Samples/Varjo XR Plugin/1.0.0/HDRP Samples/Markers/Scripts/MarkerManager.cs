@@ -38,7 +38,8 @@ public class MarkerManager : MonoBehaviour
         marker = new VarjoMarker();
 
 
-        CarCoverObj = Instantiate(markerPrefab);
+        //  CarCoverObj = Instantiate(markerPrefab);
+        CarCoverObj = this.gameObject;
     }
 
     void Update()
