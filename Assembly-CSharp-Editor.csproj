@@ -711,6 +711,9 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Robotics.ROSTCPConnector">
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
