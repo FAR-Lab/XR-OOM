@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\PoseListener.cs" />
     <Compile Include="Assets\Scripts\RosSubscriberExample.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\TransformExtensions.cs" />
     <Compile Include="Assets\Scripts\VarjoMarkerManager.cs" />
     <Compile Include="Assets\Scripts\VarjoXRInit.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -711,6 +712,9 @@
     <Reference Include="Unity.Timeline">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Robotics.ROSTCPConnector">
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
@@ -758,9 +762,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Robotics.ROSTCPConnector">
-      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

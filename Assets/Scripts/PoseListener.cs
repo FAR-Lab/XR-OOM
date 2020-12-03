@@ -13,11 +13,21 @@ public class PoseListener : MonoBehaviour
 
     void PoseChange(RosPose poseMessage)
     {
-        Debug.Log(poseMessage);
-        cube.transform.position = new Vector3(
-            (float)poseMessage.pose.position.x,
-            (float)poseMessage.pose.position.y,
-            (float)poseMessage.pose.position.z
-            );
+        cube.transform.position = TransformExtensions.Ros2Unity(new Vector3((float)poseMessage.pose.position.x,
+           (float)poseMessage.pose.position.y,
+         (float)poseMessage.pose.position.z
+          ));
+
+        cube.transform.rotation = TransformExtensions.Ros2Unity(new Quaternion((float)poseMessage.pose.orientation.x,
+           (float)poseMessage.pose.orientation.y,
+         (float)poseMessage.pose.orientation.z,
+         (float)poseMessage.pose.orientation.w
+          ));
+
+        //cube.transform.position = new Vector3(
+        //    (float)poseMessage.pose.position.z,
+        //    -(float)poseMessage.pose.position.x,
+        //    (float)poseMessage.pose.position.y
+        //    );
     }
 }
