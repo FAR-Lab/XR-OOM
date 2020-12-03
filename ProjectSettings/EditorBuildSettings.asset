@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: cbfe36cfddfde964d9dfce63a355d5dd
+  - enabled: 1
+    path: Assets/Scenes/PriusConesImplementation.unity
+    guid: 4e55632278cf6754982a30d36e4a8e1d
   m_configObjects:
     Varjo.XR.Settings: {fileID: 11400000, guid: 7ebe3d5529d4bc34599b6dfef277ccd4,
       type: 2}
