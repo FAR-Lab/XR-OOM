@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Calibrate.cs" />
     <Compile Include="Assets\InitialisingVarjoXR.cs" />
     <Compile Include="Assets\MarkerManagerOrigin.cs" />
+    <Compile Include="Assets\RosMessages\Logging\msg\Gazetracking.cs" />
     <Compile Include="Assets\RosMessages\RoboticsDemo\msg\UnityColor.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.3.1\Procedural Sky\Runtime\ProceduralSky\ProceduralSky.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.3.1\Procedural Sky\Runtime\ProceduralSky\ProceduralSkyRenderer.cs" />
@@ -87,10 +89,15 @@
     <Compile Include="Assets\Samples\Varjo XR Plugin\1.0.0\HDRP Samples\Shared\Scripts\RotateWithGaze.cs" />
     <Compile Include="Assets\Samples\Varjo XR Plugin\1.0.0\HDRP Samples\Shared\Scripts\Shoot.cs" />
     <Compile Include="Assets\Samples\Varjo XR Plugin\1.0.0\HDRP Samples\Shared\Scripts\Teleporter.cs" />
+    <Compile Include="Assets\Scripts\GazeCalibrationReqSimple.cs" />
     <Compile Include="Assets\Scripts\MarkerTrackingOrigin.cs" />
+    <Compile Include="Assets\Scripts\MotionFusion.cs" />
     <Compile Include="Assets\Scripts\PoseListener.cs" />
+    <Compile Include="Assets\Scripts\RosLog\GazeToRosLogger.cs" />
+    <Compile Include="Assets\Scripts\RosLog\HMDLogger.cs" />
     <Compile Include="Assets\Scripts\RosSubscriberExample.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\SimpleMarkerManager.cs" />
     <Compile Include="Assets\Scripts\TransformExtensions.cs" />
     <Compile Include="Assets\Scripts\VarjoMarkerManager.cs" />
     <Compile Include="Assets\Scripts\VarjoXRInit.cs" />
@@ -124,6 +131,195 @@
     <Compile Include="Assets\Varjo\Scripts\VarjoTextureBuffer.cs" />
     <Compile Include="Assets\Varjo\Scripts\VarjoViewCamera.cs" />
     <Compile Include="Assets\XRInit.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\ImuMov.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\XsenseImuMonoBehaviorWrapper.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\HardwareManufacturerType.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\IpProtocol.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\NetworkLayerProtocol.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_DataPacketPrivate.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_FILE.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_Journaller.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_XsArrayDescriptor.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_XsArrayImplT_XsDataPacketPtr_g_xsDataPacketPtrArrayDescriptor_XsDataPacketPtrArray_t__ArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_XsArrayImplT_XsDevicePtr_g_xsDevicePtrArrayDescriptor_XsDevicePtrArray_t__ArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_XsStringOutputType.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p___int64.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_double.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_int_p_q_const__XsByteArray__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevicePtrArray_p_q_const__XsDataPacketPtrArray__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_enum_XsConnectivityState__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_enum_XsDeviceState_enum_XsDeviceState__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_enum_XsInfoRequest__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_enum_XsProtocolType_p_q_const__XsByteArray__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_enum_XsResultValue__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_int_int_int__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_int_int_p_q_const__XsString__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_long_long__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_p_q_const__XsDataPacket__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_p_q_const__XsMessage__int.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_XsDevice_p_q_const__XsMessage__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_XsCallbackPlainC_p_q_const__XsString_enum_XsResultValue__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_q_const__XsString__void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_f_p_q_const__void_p_q_const__void__int.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_int.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_long_long.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_p_XsDataPacket.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_p_XsDevice.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_short.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_size_t.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_std__mapT_XsDataIdentifier_void_p_t.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_std__string.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_std__vectorT_double_t.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_std__wstring.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_time_t.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_tm.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_unsigned_char.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_unsigned_short.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_void.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SWIGTYPE_p_wchar_t.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SnapshotStatusFlag.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\SnapshotType.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsAccessControlMode.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsAlignmentFrame.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsAnalogInData.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsBaudCode.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsBaudRate.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsBoolean.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsByteArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsByteArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCalibratedData.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCalibratedDataMode.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCallback.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCallbackPlainC.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCanBaudCode.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCanDataIdentifier.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCanFrameFormat.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCanOutputConfiguration.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCanOutputConfigurationArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCanOutputConfigurationArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsConnectivityState.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsControl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsControlLine.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsCoordinateSystem.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDataFlags.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDataIdentifier.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDataIdentifierValue.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDataPacket.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDataPacketPtrArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDataPacketPtrArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDevice.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceCapabilities.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceCapability.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceConfiguration.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceConfigurationException.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceErrorType.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceId.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceIdArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceIdArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceOptionFlag.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceParameter.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceParameterIdentifier.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDevicePtrArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDevicePtrArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceRef.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsDeviceState.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsErrorMode.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsEuler.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsException.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsFile.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsFilterProfile.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsFilterProfileArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsFilterProfileArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsFilterProfileKind.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsFingerData.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsFingerSnapshot.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsFloatFormat.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsGloveData.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsGloveSnapshot.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsGnssPlatform.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsHandId.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsIccCommand.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsIccRepMotionResult.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsIccStatusFlag.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsInfoRequest.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsInt64Array.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsInt64ArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsIntArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsIntArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsLibraryLoader.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMasterDeviceConfiguration.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMatrix.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMatrix3x3.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMessage.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMessageArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMessageArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMessageHeader.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMfmResultValue.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsMtDeviceConfiguration.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsOperationalMode.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsOption.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsOrientationMode.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsOutputConfiguration.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsOutputConfigurationArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsOutputConfigurationArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsPortInfo.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsPortInfoArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsPortInfoArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsPortLinesOptions.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsPressure.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsProcessingFlag.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsProtocol.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsProtocolType.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsQuaternion.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsQuaternionArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsRange.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsRawGnssPvtData.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsRawGnssSatInfo.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsRejectReason.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsResetMethod.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsResultValue.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSatInfo.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSatInfoFlags.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsScanner.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsScrData.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSdiData.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSelfTestFlag.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSelfTestResult.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSimpleVersion.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSnapshot.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSocket.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSocketOption.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsStatus.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsStatusFlag.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsStatusFlagOffset.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsString.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsStringArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsStringArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsStringImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsStringOutputType.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsStringOutputTypeArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSyncFunction.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSyncLine.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSyncPolarity.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSyncRole.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSyncSetting.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSyncSettingArray.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsSyncSettingArrayImpl.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsThreadPriority.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsTimeInfo.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsTimeStamp.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsTriggerIndicationData.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsUShortVector.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsUsbHubInfo.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsVector.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsVector3.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsVersion.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\XsXbusMessageId.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\int24_t.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\xsensdeviceapi.cs" />
+    <Compile Include="Assets\XsenseImu\Scripts\wrap_csharp64\xsensdeviceapiPINVOKE.cs" />
     <None Include="Assets\Varjo\VERSION.txt" />
     <None Include="Assets\Samples\High Definition RP\7.3.1\Material Samples\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Varjo\Samples\Shaders\UI-SingleChannel.shader" />
@@ -691,6 +887,15 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.XR.MagicLeap">
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEditor.XR.MagicLeap.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystems">
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystems.Editor">
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
@@ -699,6 +904,9 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.InteractionSubsystems">
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.XR.InteractionSubsystems.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
@@ -759,6 +967,9 @@
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XR.MagicLeap">
+      <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEngine.XR.MagicLeap.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/farla/Documents/GitHub/XR-OOM/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

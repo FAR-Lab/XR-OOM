@@ -1,0 +1,3 @@
+1607101794.337 <6600> [WRITE] Journaller::setDebugLevel Debugger output log level set to [FATAL] 
+1607101794.337 <6600> [WRITE] Journaller::writeFileHeader Journaller logging to C:\Users\farla\Documents\GitHub\XR-OOM\xkf3hm.log for xkf3hm 0.1.0 / 106296 build 5355 on 2020/12/04 17:09:54.337
+1607101794.337 <6600> [WRITE] Journaller::setFlushLevel Flush level switched to [DEBUG] 
