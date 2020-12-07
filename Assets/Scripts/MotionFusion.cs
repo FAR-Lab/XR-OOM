@@ -33,8 +33,9 @@ public class MotionFusion : MonoBehaviour
         if (NewZedData)
         {
             NewZedData = false;
-
+            ZedPos.y = 0.815f;
             transform.position = ZedPos;
+           
             transform.rotation = Quaternion.Euler(transform.rotation.x, ZedRot.eulerAngles.y, transform.rotation.z);
             yawOffset = ZedRot* Quaternion.Inverse(XsenseImuMonoBehaviorWrapper.Instance.Orientation);
         }
@@ -45,5 +46,18 @@ public class MotionFusion : MonoBehaviour
         //TODO: Add can bus speed from the vehicle...
         //TODO: Probably more
 
+    }
+    void OnDrawGizmos()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.blue;
+
+        Gizmos.DrawRay(transform.position, transform.forward*25);
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawRay(transform.position, transform.right * 25);
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawRay(transform.position, transform.up * 25);
     }
 }

@@ -5,8 +5,9 @@ using UnityEngine;
 public class Calibrate : MonoBehaviour
 {
     public GameObject OffsetObject;
-    public GameObject Mh;
-    public GameObject Mz;
+    public GameObject TrackedVirtualMarkPosition;
+    public GameObject TargetFixedPositionMarker;
+  
     
     // Start is called before the first frame update
     void Start()
@@ -17,9 +18,9 @@ public class Calibrate : MonoBehaviour
     void MoveGameObject()
     {
 
-        OffsetObject.transform.rotation *=  Quaternion.FromToRotation(Mh.transform.forward, Mz.transform.forward);
+        OffsetObject.transform.rotation *=  Quaternion.FromToRotation(TrackedVirtualMarkPosition.transform.forward, TargetFixedPositionMarker.transform.forward);
 
-        Vector3 positionadjust = Mz.transform.position - Mh.transform.position;
+        Vector3 positionadjust = TargetFixedPositionMarker.transform.position - TrackedVirtualMarkPosition.transform.position;
         OffsetObject.transform.position += positionadjust;
     }
 
