@@ -9,3 +9,8 @@ Note about marker IDs
 1 marker is used above ZedMini, marker ID is 200 (assigned in XR-OOM/Assets/Scripts/SimpleMarkerManager.cs)
 3 markers are used to align ground plane, marker IDs are 201, 202, 203 (assigned in XR-OOM/Assets/GroundMarkerManager.cs)
 
+Marker guidelines: use as large a marker as possible. https://developer.varjo.com/docs/get-started/varjo-markers
+25mm (~1”) Tracked up-to 0.5 meter (1.5 feet) 
+50mm (~2”) Tracked up-to 1 meter (3 feet) 
+150mm (~6”) Tracked up-to 3 meters (9 feet)
+
