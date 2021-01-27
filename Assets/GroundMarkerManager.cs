@@ -38,9 +38,9 @@ public class GroundMarkerManager : MonoBehaviour
                     if (marker.id == 302)
                     {
                         //transform.localPosition = marker.pose.position; //changed to direct local association transform instead of 
-                        CubeR.transform.localPosition = marker.pose.position; //left marker
+                        CubeR.transform.localPosition = marker.pose.position; //right marker
                     }
-                    if (marker.id == 303)
+                    if (marker.id == 300)
                     {
                         //transform.localPosition = marker.pose.position; //changed to direct local association transform instead of 
                         CubeF.transform.localPosition = marker.pose.position; //far ahead marker
