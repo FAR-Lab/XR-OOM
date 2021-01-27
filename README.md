@@ -6,7 +6,7 @@ Augmented Reality On rOad siMulation. This reposity serves as version control an
 3. Open Dtrack3 and start tracking. Always make sure checkbox "Tracking > Output Settings > act as router for tracking output" is selected, in case the tracking data is not received in Varjo Base.
 
 Note about marker IDs
-1 50mm marker is used above ZedMini, marker ID is 200 (assigned in XR-OOM/Assets/Scripts/SimpleMarkerManager.cs)
+1 50mm marker is used above ZedMini, marker ID is 204 (assigned in XR-OOM/Assets/Scripts/SimpleMarkerManager.cs)
 3 150mm markers are used to align ground plane, marker IDs are 300, 301, 302 (assigned in XR-OOM/Assets/GroundMarkerManager.cs)
 
 Marker guidelines: use as large a marker as possible. https://developer.varjo.com/docs/get-started/varjo-markers
