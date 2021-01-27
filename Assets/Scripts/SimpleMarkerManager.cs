@@ -24,7 +24,7 @@ public class SimpleMarkerManager : MonoBehaviour
 
                 foreach (var marker in _markers)
                 {
-                    if (marker.id == 200)
+                    if (marker.id == 204)
                     {
                         transform.localPosition = marker.pose.position; //changed to direct local association transform instead of 
                     }
