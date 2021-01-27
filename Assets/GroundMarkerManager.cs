@@ -30,17 +30,17 @@ public class GroundMarkerManager : MonoBehaviour
 
                 foreach (var marker in _markers)
                 {
-                    if (marker.id == 201)
+                    if (marker.id == 301)
                     {
                         //transform.localPosition = marker.pose.position; //changed to direct local association transform instead of 
                         CubeL.transform.localPosition = marker.pose.position; //left marker
                     }
-                    if (marker.id == 202)
+                    if (marker.id == 302)
                     {
                         //transform.localPosition = marker.pose.position; //changed to direct local association transform instead of 
                         CubeR.transform.localPosition = marker.pose.position; //left marker
                     }
-                    if (marker.id == 203)
+                    if (marker.id == 303)
                     {
                         //transform.localPosition = marker.pose.position; //changed to direct local association transform instead of 
                         CubeF.transform.localPosition = marker.pose.position; //far ahead marker
