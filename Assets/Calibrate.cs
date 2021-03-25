@@ -15,11 +15,12 @@ public class Calibrate : MonoBehaviour
         
     }
 
-    void MoveGameObject()
+    public void MoveGameObject()
     {
+        Debug.Log(Quaternion.FromToRotation(TrackedVirtualMarkPosition.transform.forward, TargetFixedPositionMarker.transform.forward).eulerAngles.magnitude);
 
         OffsetObject.transform.rotation *=  Quaternion.FromToRotation(TrackedVirtualMarkPosition.transform.forward, TargetFixedPositionMarker.transform.forward);
-
+        Debug.Log(Quaternion.FromToRotation(TrackedVirtualMarkPosition.transform.forward, TargetFixedPositionMarker.transform.forward).eulerAngles.magnitude);
         Vector3 positionadjust = TargetFixedPositionMarker.transform.position - TrackedVirtualMarkPosition.transform.position;
         OffsetObject.transform.position += positionadjust;
     }
@@ -27,10 +28,10 @@ public class Calibrate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.X))
+        /*if (Input.GetKeyUp(KeyCode.X))
         {
             MoveGameObject();
-        }
+        }*/
     }
 }
 

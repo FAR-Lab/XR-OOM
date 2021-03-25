@@ -31,13 +31,13 @@ public class SimpleMarkerManager : MonoBehaviour
                 }
             }
             else if (Input.GetKeyUp(KeyCode.X)) { VarjoMarkers.EnableVarjoMarkers(false); }
-            else
+           /* else
             {
-                if (VarjoMarkers.IsVarjoMarkersEnabled())
+               / if (VarjoMarkers.IsVarjoMarkersEnabled())
                 {
                     VarjoMarkers.EnableVarjoMarkers(false);
                 }
-            }
+            }*/
 
         }
 
