@@ -24,10 +24,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.5",
+      "version": "2.0.7",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
@@ -38,7 +40,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "10.3.1",
+      "version": "10.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -47,23 +49,23 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.high-definition": {
-      "version": "10.3.1",
+      "version": "10.4.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.core": "10.3.1",
-        "com.unity.shadergraph": "10.3.1",
-        "com.unity.visualeffectgraph": "10.3.1",
-        "com.unity.render-pipelines.high-definition-config": "10.3.1"
+        "com.unity.render-pipelines.core": "10.4.0",
+        "com.unity.shadergraph": "10.4.0",
+        "com.unity.visualeffectgraph": "10.4.0",
+        "com.unity.render-pipelines.high-definition-config": "10.4.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.high-definition-config": {
-      "version": "10.3.1",
+      "version": "10.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.core": "10.3.1"
+        "com.unity.render-pipelines.core": "10.4.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -82,11 +84,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "10.3.1",
+      "version": "10.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.core": "10.3.1",
+        "com.unity.render-pipelines.core": "10.4.0",
         "com.unity.searcher": "4.3.1"
       },
       "url": "https://packages.unity.com"
@@ -99,7 +101,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.22",
+      "version": "1.1.24",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -140,16 +142,17 @@
       }
     },
     "com.unity.visualeffectgraph": {
-      "version": "10.3.1",
+      "version": "10.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.shadergraph": "10.3.1"
+        "com.unity.shadergraph": "10.4.0",
+        "com.unity.render-pipelines.core": "10.4.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arsubsystems": {
-      "version": "4.0.8",
+      "version": "4.0.12",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -177,7 +180,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.magicleap": {
-      "version": "6.0.0",
+      "version": "6.2.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -185,18 +188,21 @@
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0",
         "com.unity.ugui": "1.0.0",
-        "com.unity.xr.arsubsystems": "4.0.1",
+        "com.unity.xr.arsubsystems": "4.0.12",
         "com.unity.xr.interactionsubsystems": "1.0.1",
-        "com.unity.xr.management": "3.2.10"
+        "com.unity.xr.management": "4.0.1"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "3.2.16",
-      "depth": 0,
+      "version": "4.0.1",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.legacyinputhelpers": "2.1.2",
+        "com.unity.modules.subsystems": "1.0.0",
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.7",
         "com.unity.subsystemregistration": "1.0.6"
       },
       "url": "https://packages.unity.com"

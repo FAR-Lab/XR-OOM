@@ -113,3 +113,14 @@ The following packages were updated:
   com.unity.render-pipelines.high-definition from version 10.2.2 to 10.3.1
   com.unity.test-framework from version 1.1.19 to 1.1.22
   com.unity.timeline from version 1.2.10 to 1.4.6
+
+=== Fri Apr  9 15:34:35 2021
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ide.visualstudio from version 2.0.5 to 2.0.7
+  com.unity.render-pipelines.high-definition from version 10.3.1 to 10.4.0
+  com.unity.test-framework from version 1.1.22 to 1.1.24
+  com.unity.xr.magicleap from version 6.0.0 to 6.2.2
