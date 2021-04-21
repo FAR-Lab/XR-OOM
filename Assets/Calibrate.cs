@@ -48,11 +48,17 @@ public class Calibrate : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
+                /*
+                Vector3 temp = CallibrationPosition.position - VRHeadset.position;
+                Debug.Log(temp.magnitude.ToString() + "Adjusting position" + temp.ToString()); ;
+                VRWorldZero.position += temp;
+                */
 
                 Quaternion tempRotation = Quaternion.FromToRotation(CallibrationPosition.forward, VRHeadset.forward);
                 Debug.Log(tempRotation.eulerAngles.magnitude.ToString() + "Adjusting orientation" + tempRotation.eulerAngles.ToString()); ;
-                VRWorldZero.rotation =  tempRotation;
-
+                Vector3 axis;float angle;
+                tempRotation.ToAngleAxis(out angle, out axis);
+                VRWorldZero.RotateAround(CallibrationPosition.position, axis, angle);
 
                 Vector3 temp = CallibrationPosition.position - VRHeadset.position;
                 Debug.Log(temp.magnitude.ToString() + "Adjusting position" + temp.ToString()); ;
