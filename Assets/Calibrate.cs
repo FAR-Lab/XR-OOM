@@ -5,7 +5,16 @@ using sl;
 public class Calibrate : MonoBehaviour
 {
 
-    
+    private bool ZedToCarCalibrated = false; // This shold really be an enume with multiple calibration steps
+
+
+    public bool UseXZYawParenting = false;
+    private Vector3 ZedToCarOffset;
+    private float ZedToCarYaw;
+
+    private Vector3 CarToXROffset;
+    private float CarToXRYaw;
+
     /// <summary>
     /// Relative to the world car<>world
     /// </summary>
@@ -37,53 +46,48 @@ public class Calibrate : MonoBehaviour
 
     public void MoveGameObject()
     {
-        //Debug.Log(Quaternion.FromToRotation(TrackedVirtualMarkPosition.transform.forward, TargetFixedPositionMarker.transform.forward).eulerAngles.magnitude);
-
-//        OffsetObject.transform.rotation *=  Quaternion.FromToRotation(TrackedVirtualMarkPosition.transform.forward, TargetFixedPositionMarker.transform.forward);
-  //      Debug.Log(Quaternion.FromToRotation(TrackedVirtualMarkPosition.transform.forward, TargetFixedPositionMarker.transform.forward).eulerAngles.magnitude);
-    //    Vector3 positionadjust = TargetFixedPositionMarker.transform.position - TrackedVirtualMarkPosition.transform.position;
-      //  OffsetObject.transform.position += positionadjust;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && zedManager.ZEDTrackingState == sl.TRACKING_STATE.TRACKING_OK && transform.parent==null)
+        if (Input.GetKeyDown(KeyCode.X) && 
+            zedManager.ZEDTrackingState == sl.TRACKING_STATE.TRACKING_OK && 
+            ZedToCarCalibrated==false)
         {
-            transform.position += zedManager.transform.position - ZedLocationCar.position;
-            transform.parent = zedManager.transform;
-            Debug.Log(zedManager.ZEDTrackingState + "  " + zedManager.transform.position.y.ToString());
+            ZedToCarCalibrated = true;
+            if (!UseXZYawParenting)
+            {
+                transform.position += zedManager.transform.position - ZedLocationCar.position;
+                transform.parent = zedManager.transform;
+                Debug.Log(zedManager.ZEDTrackingState + 
+                    "  " + zedManager.transform.position.y.ToString());
+            }
+            else
+            {
+                ZedToCarOffset = zedManager.transform.position - ZedLocationCar.position;
+                //zedManager.tr
+                ZedToCarYaw = zedManager.transform.eulerAngles.y - ZedLocationCar.eulerAngles.y;
+
+
+            }
         }
-        else if(transform.parent == zedManager.transform)
+        else if (transform.parent == zedManager.transform)
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
-                
-                /*
-                Vector3 temp = CallibrationPosition.position - VRHeadset.position;
-                Debug.Log(temp.magnitude.ToString() + "Adjusting position" + temp.ToString()); ;
-                VRWorldZero.position += temp;
-                */
+                if (!UseXZYawParenting)
+                {
+                    Quaternion tempRotation = Quaternion.FromToRotation(VRHeadset.forward, CallibrationPosition.forward);
+                    Debug.Log(tempRotation.eulerAngles.magnitude.ToString() + "Adjusting orientation" + tempRotation.eulerAngles.ToString()); ;
+                    VRWorldZero.rotation = tempRotation * VRWorldZero.rotation;
 
-
-
-                  Quaternion tempRotation = Quaternion.FromToRotation( VRHeadset.forward, CallibrationPosition.forward);
-                //Quaternion tempRotation =   CallibrationPosition.rotation * Quaternion.Inverse(VRHeadset.rotation);
-                    
-                Debug.Log(tempRotation.eulerAngles.magnitude.ToString() + "Adjusting orientation" + tempRotation.eulerAngles.ToString()); ;
-                //Vector3 axis;float angle;
-                //tempRotation.ToAngleAxis(out angle, out axis);
-                // VRWorldZero.RotateAround(CallibrationPosition.position, axis, angle);
-                VRWorldZero.rotation = tempRotation* VRWorldZero.rotation ;
-
-
-
-                  Vector3   temp = CallibrationPosition.position - VRHeadset.position;
-                Debug.Log(temp.magnitude.ToString() + "Adjusting position" + temp.ToString()); ;
-                VRWorldZero.position += temp;
+                    Vector3 temp = CallibrationPosition.position - VRHeadset.position;
+                    Debug.Log(temp.magnitude.ToString() + "Adjusting position" + temp.ToString()); ;
+                    VRWorldZero.position += temp;
+                }
             }
-
-
         }
     }
 }

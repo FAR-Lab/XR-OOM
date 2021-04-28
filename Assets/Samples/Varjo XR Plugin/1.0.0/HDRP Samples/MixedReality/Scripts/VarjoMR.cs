@@ -88,7 +88,7 @@ public class VarjoMR : MonoBehaviour
 
     IEnumerator GetSettingsWhenInitialized()
     {
-        while (!XRGeneralSettings.Instance.Manager.isInitializationComplete)
+        while (XRGeneralSettings.Instance == null  &&  !XRGeneralSettings.Instance.Manager.isInitializationComplete)
         {
             Debug.Log("Waiting for init..");
             yield return new WaitForSeconds(0.1f);
