@@ -67,13 +67,10 @@ public class Calibrate : MonoBehaviour
             else
             {
                 ZedToCarOffset = zedManager.transform.position - ZedLocationCar.position;
-                //zedManager.tr
                 ZedToCarYaw = zedManager.transform.eulerAngles.y - ZedLocationCar.eulerAngles.y;
-
-
             }
         }
-        else if (transform.parent == zedManager.transform)
+        else if (ZedToCarCalibrated)
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
@@ -87,7 +84,32 @@ public class Calibrate : MonoBehaviour
                     Debug.Log(temp.magnitude.ToString() + "Adjusting position" + temp.ToString()); ;
                     VRWorldZero.position += temp;
                 }
+                else
+                {
+
+                    float tempRotation = Quaternion.FromToRotation(VRHeadset.forward, CallibrationPosition.forward).eulerAngles.y;
+                    Debug.Log(tempRotation.ToString() + "Adjusting orientation" ); ;
+                    VRWorldZero.Rotate(Vector3.up, tempRotation);
+
+
+                    Vector3 temp = CallibrationPosition.position - VRHeadset.position;
+                    Debug.Log(temp.magnitude.ToString() + "Adjusting position" + temp.ToString()); ;
+                    VRWorldZero.position += temp;
+                }
             }
+        }
+    }
+    private void LateUpdate()
+    {
+        
+        if (UseXZYawParenting)
+        {
+            ZedLocationCar.position = ZedToCarOffset + zedManager.transform.position;
+             Vector3 newRotation = new Vector3(
+                 ZedLocationCar.eulerAngles.x,
+                 zedManager.transform.eulerAngles.y+ ZedToCarYaw,
+                 ZedLocationCar.eulerAngles.z);
+            ZedLocationCar.eulerAngles = newRotation;
         }
     }
 }
