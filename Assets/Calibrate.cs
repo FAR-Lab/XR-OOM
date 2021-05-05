@@ -5,6 +5,8 @@ using sl;
 public class Calibrate : MonoBehaviour
 {
 
+
+    public float height = 0;
     private bool ZedToCarCalibrated = false; // This shold really be an enume with multiple calibration steps
 
 
@@ -19,7 +21,7 @@ public class Calibrate : MonoBehaviour
     /// Relative to the world car<>world
     /// </summary>
     public Transform ZedCameraTracker;
-    public Transform ZedLocationCar;
+    //public Transform ZedLocationCar;
 
 
 
@@ -59,23 +61,25 @@ public class Calibrate : MonoBehaviour
             ZedToCarCalibrated = true;
             if (!UseXZYawParenting)
             {
-                transform.position += zedManager.transform.position - ZedLocationCar.position;
+                transform.position += zedManager.transform.position - transform.position;
                 transform.parent = zedManager.transform;
                 Debug.Log(zedManager.ZEDTrackingState + 
                     "  " + zedManager.transform.position.y.ToString());
             }
             else
             {
-                ZedToCarOffset = zedManager.transform.position - ZedLocationCar.position;
-                ZedToCarYaw = zedManager.transform.eulerAngles.y - ZedLocationCar.eulerAngles.y;
+                //ZedToCarOffset = zedManager.transform.position - ZedLocationCar.position;
+                ZedToCarYaw = zedManager.transform.eulerAngles.y - transform.eulerAngles.y;
             }
         }
         else if (ZedToCarCalibrated)
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
+                
                 if (!UseXZYawParenting)
                 {
+                    VRWorldZero.parent = transform;
                     Quaternion tempRotation = Quaternion.FromToRotation(VRHeadset.forward, CallibrationPosition.forward);
                     Debug.Log(tempRotation.eulerAngles.magnitude.ToString() + "Adjusting orientation" + tempRotation.eulerAngles.ToString()); ;
                     VRWorldZero.rotation = tempRotation * VRWorldZero.rotation;
@@ -87,29 +91,41 @@ public class Calibrate : MonoBehaviour
                 else
                 {
 
-                    float tempRotation = Quaternion.FromToRotation(VRHeadset.forward, CallibrationPosition.forward).eulerAngles.y;
-                    Debug.Log(tempRotation.ToString() + "Adjusting orientation" ); ;
-                    VRWorldZero.Rotate(Vector3.up, tempRotation);
-
-
-                    Vector3 temp = CallibrationPosition.position - VRHeadset.position;
-                    Debug.Log(temp.magnitude.ToString() + "Adjusting position" + temp.ToString()); ;
-                    VRWorldZero.position += temp;
+                     CarToXRYaw = Quaternion.FromToRotation(VRHeadset.forward, CallibrationPosition.forward).eulerAngles.y;
+                    Debug.Log(" Yaw Offset" + CarToXRYaw.ToString());
+                    CarToXROffset = CallibrationPosition.position - VRHeadset.position;
                 }
             }
         }
+
+    //    Debug.DrawRay(Vector3.zero, VRWorldZero.forward, Color.green);
+      //  Debug.DrawRay(Vector3.zero, VRHeadset.forward, Color.red);
+       // Debug.DrawRay(Vector3.zero, transform.forward, Color.blue);
+
+//        Debug.DrawRay(VRWorldZero.position, VRWorldZero.forward, Color.green);
+  //      Debug.DrawRay(VRHeadset.position, VRHeadset.forward, Color.red);
+    //    Debug.DrawRay(transform.position, transform.forward, Color.blue);
     }
     private void LateUpdate()
     {
         
         if (UseXZYawParenting)
         {
-            ZedLocationCar.position = ZedToCarOffset + zedManager.transform.position;
+            transform.position = new Vector3(zedManager.transform.position.x, height, zedManager.transform.position.z);
              Vector3 newRotation = new Vector3(
-                 ZedLocationCar.eulerAngles.x,
+                 transform.eulerAngles.x,
                  zedManager.transform.eulerAngles.y+ ZedToCarYaw,
-                 ZedLocationCar.eulerAngles.z);
-            ZedLocationCar.eulerAngles = newRotation;
+                 transform.eulerAngles.z);
+            transform.eulerAngles = newRotation;
+
+
+            VRWorldZero.position = CallibrationPosition.position + CarToXROffset;
+            newRotation = new Vector3(
+                VRWorldZero.eulerAngles.x,
+                CallibrationPosition.eulerAngles.y+ ZedToCarYaw,
+                VRWorldZero.eulerAngles.z);
+            VRWorldZero.eulerAngles = newRotation;
+
         }
     }
 }

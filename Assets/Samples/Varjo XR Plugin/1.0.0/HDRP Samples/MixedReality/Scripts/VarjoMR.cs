@@ -88,7 +88,18 @@ public class VarjoMR : MonoBehaviour
 
     IEnumerator GetSettingsWhenInitialized()
     {
-        while (XRGeneralSettings.Instance == null  &&  !XRGeneralSettings.Instance.Manager.isInitializationComplete)
+        while (XRGeneralSettings.Instance == null) {
+            Debug.Log("Waiting for Instance");
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        while (XRGeneralSettings.Instance.Manager == null)
+        {
+            Debug.Log("Waiting for Manager");
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        while (!XRGeneralSettings.Instance.Manager.isInitializationComplete)
         {
             Debug.Log("Waiting for init..");
             yield return new WaitForSeconds(0.1f);
@@ -235,6 +246,7 @@ public class VarjoMR : MonoBehaviour
 
     void OnDisable()
     {
+
         videoSeeThrough = false;
         depthEstimation = false;
         environmentReflections = false;
