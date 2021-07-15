@@ -247,11 +247,12 @@ public class VarjoMR : MonoBehaviour
     void OnDisable()
     {
 
+
         videoSeeThrough = false;
         depthEstimation = false;
-        environmentReflections = false;
+        environmentReflections = false;    
         UpdateMRFeatures();
-        settings.opaque = originalOpaqueValue;
+        settings.opaque = originalOpaqueValue;    
         settings.UpdateSettings();
-    }
-}
+    }     
+}      
