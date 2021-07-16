@@ -7,11 +7,13 @@ public class Calibrate : MonoBehaviour
 
 
     public float height = 0;
-    private bool ZedToCarCalibrated = false; // This shold really be an enume with multiple calibration steps
-
+    private bool ReadyForCalibration=false;
+    private bool calibrationFinished = false;
 
     private Vector3 ZedToCarOffset;
     private float ZedToCarYaw;
+    
+    private float CarHeight = 0;
 
     private Vector3 CarToXROffset;
     private float CarToXRYaw;
@@ -20,13 +22,7 @@ public class Calibrate : MonoBehaviour
     /// Relative to the world car<>world
     /// </summary>
     public Transform ZedCameraTracker;
-    //public Transform ZedLocationCar;
-
-
-
-    /// <summary>
-    /// Relative between headset and car
-    /// </summary>
+ 
     public Transform VRHeadset;
     public Transform VRWorldZero;
     public Transform CallibrationPosition; // SHould be on the center arm rest
@@ -53,35 +49,33 @@ public class Calibrate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+
+        if (!ReadyForCalibration)
         {
-            ZedToCarCalibrated = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.X) &&
-        zedManager.ZEDTrackingState == sl.TRACKING_STATE.TRACKING_OK &&
-        ZedToCarCalibrated == false)
-        {
-           // ZedToCarCalibrated = true;
-           // ZedToCarYaw = zedManager.transform.eulerAngles.y - transform.eulerAngles.y;
-       
-           // CarToXRYaw = Quaternion.FromToRotation(VRHeadset.forward, CallibrationPosition.forward).eulerAngles.y;
-            CarToXRYaw = VRHeadset.rotation.eulerAngles.y- CallibrationPosition.rotation.eulerAngles.y;
-
-            if (CarToXRYaw > 180f)
+            if (zedManager.ZEDTrackingState == sl.TRACKING_STATE.TRACKING_OK)
             {
-                CarToXRYaw = -360 + CarToXRYaw;
+                ReadyForCalibration = true;
+                CarHeight = transform.position.y;
+                transform.parent = zedManager.transform;
             }
-            else if (CarToXRYaw < -180f)
-            {
-                CarToXRYaw = 360 + CarToXRYaw;
-            }
-
-
-            Debug.Log(" Yaw Offset" + CarToXRYaw.ToString());
-            CarToXROffset = CallibrationPosition.position - VRHeadset.position;
             
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.X) && ! calibrationFinished)
+            {
+                CarToXROffset = CallibrationPosition.position - VRHeadset.position;
+                calibrationFinished = true;
+                VRWorldZero.transform.position += CarToXROffset;
+                VRWorldZero.transform.parent = transform;
 
+            }
+            else if(Input.GetKeyDown(KeyCode.Z) && calibrationFinished)
+            {
+                CarToXRYaw = VRHeadset.rotation.eulerAngles.y - CallibrationPosition.rotation.eulerAngles.y;
+
+                VRWorldZero.RotateAround(VRWorldZero.transform.position,Vector3.up,CarToXRYaw);
+            }
         }
 
 
@@ -89,25 +83,9 @@ public class Calibrate : MonoBehaviour
     private void LateUpdate()
     {
 
-        if (true)//(ZedToCarCalibrated)
+        if (calibrationFinished)
         {
-          //  transform.position = new Vector3(zedManager.transform.position.x, height, zedManager.transform.position.z);
-          //  Vector3 newRotation = new Vector3(
-          //      transform.eulerAngles.x,
-            //    zedManager.transform.eulerAngles.y + ZedToCarYaw,
-              //  transform.eulerAngles.z);
-         //   transform.eulerAngles = newRotation;
-
-
-            Vector3 temp = (CallibrationPosition.position + CarToXROffset);
-            temp.y = 0;
-            VRWorldZero.position = temp;
-            Vector3  newRotation = new Vector3(
-                VRWorldZero.eulerAngles.x,
-                CallibrationPosition.eulerAngles.y - CarToXRYaw,
-                VRWorldZero.eulerAngles.z);
-            VRWorldZero.eulerAngles = newRotation;
-
+         transform.position = new Vector3(transform.position.x, CarHeight, transform.position.z);
         }
     }
 }

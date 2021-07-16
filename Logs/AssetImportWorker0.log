@@ -1,0 +1,708 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.13f1 (71691879b7f5) revision 7432472'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19043.1110; Version 2009; 64bit' Language: 'en' Physical Memory: 97995 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.13f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/XRCareLab/GitHub/XR-OOM
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+54486
+Successfully changed project path to: C:/Users/XRCareLab/GitHub/XR-OOM
+C:/Users/XRCareLab/GitHub/XR-OOM
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 228.34 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.13f1 (71691879b7f5)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/XRCareLab/GitHub/XR-OOM/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA Quadro RTX 4000 (ID=0x1eb1)
+    Vendor:   
+    VRAM:     8018 MB
+    Driver:   30.0.14.7111
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
+Registered in 0.002367 seconds.
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 96.62 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.312 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007437 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 103.44 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+HDRP Internally changed the storage of Cube Cookie to use Octahedral Projection inside the 2D Cookie Atlas. It is recommended that you increase the size of the 2D Cookie Atlas if your cookies no longer fit.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset/<>c:<.cctor>b__110_12 (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipelineAsset.Migration.cs:126)
+UnityEngine.Rendering.HighDefinition.MigrationStep`2<UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset/Version, UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset>:Migrate (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/Core/Migration/MigrationStep.cs:52)
+UnityEngine.Rendering.HighDefinition.MigrationDescription`2<UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset/Version, UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset>:Migrate (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/Core/Migration/MigrationDescription.cs:101)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset:OnEnable () (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipelineAsset.Migration.cs:146)
+UnityEngine.Rendering.GraphicsSettings:get_currentRenderPipeline ()
+UnityEditor.Rendering.HighDefinition.HDBakedReflectionSystem:Initialize () (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Editor/Lighting/Reflection/HDBakedReflectionSystem.cs:42)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipelineAsset.Migration.cs Line: 126)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.580 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.48 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4545 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 210.8 MB.
+System memory in use after: 211.0 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 4981.
+Total: 5.482100 ms (FindLiveObjects: 0.833400 ms CreateObjectMapping: 0.339900 ms MarkObjects: 4.194500 ms  DeleteObjects: 0.112400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/ZED2_CallibrationTest.unity
+  artifactKey: Guid(0cdb313784a02c443953d9af34736d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ZED2_CallibrationTest.unity using Guid(0cdb313784a02c443953d9af34736d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb520a054cf6f79ebd2b00fab4635a3f') in 0.025517 seconds 
+  Import took 0.035965 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005283 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.32 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.431 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.47 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4207 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 190.4 MB.
+System memory in use after: 190.6 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 4985.
+Total: 5.086000 ms (FindLiveObjects: 0.673500 ms CreateObjectMapping: 0.323900 ms MarkObjects: 4.038700 ms  DeleteObjects: 0.048700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004989 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.53 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.110 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.41 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4207 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 190.5 MB.
+System memory in use after: 190.7 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 4989.
+Total: 4.509100 ms (FindLiveObjects: 0.704600 ms CreateObjectMapping: 0.350100 ms MarkObjects: 3.429100 ms  DeleteObjects: 0.024100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005558 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.087 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.40 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4207 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 190.5 MB.
+System memory in use after: 190.8 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 4993.
+Total: 4.860500 ms (FindLiveObjects: 0.697700 ms CreateObjectMapping: 0.359600 ms MarkObjects: 3.766400 ms  DeleteObjects: 0.035700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005471 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.081 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.33 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4207 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 190.5 MB.
+System memory in use after: 190.8 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 4997.
+Total: 5.812100 ms (FindLiveObjects: 0.732800 ms CreateObjectMapping: 0.412500 ms MarkObjects: 4.635900 ms  DeleteObjects: 0.028800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2091.657770 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/VarjoController/Materials/ButtonPressedMaterial.mat
+  artifactKey: Guid(b683cb38ee7561248886e5852a96da19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/VarjoController/Materials/ButtonPressedMaterial.mat using Guid(b683cb38ee7561248886e5852a96da19) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+ -> (artifact id: '64ca13c769e738e0ce78733ee25ebed3') in 2.647379 seconds 
+  Import took 2.658171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000431 seconds.
+  path: Assets/Varjo/Samples/Materials/MatteMaterial.mat
+  artifactKey: Guid(0bdc4ff1dd2e6ce49808fe5554befaa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/MatteMaterial.mat using Guid(0bdc4ff1dd2e6ce49808fe5554befaa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '683825295c9d7b0227f2380cf277c3ff') in 0.036636 seconds 
+  Import took 0.045541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Samples/High Definition RP/7.3.1/Shader Graph Samples/Meshes/MaterialBall.prefab
+  artifactKey: Guid(7822020b9f9222c458b8de51cf8846ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/High Definition RP/7.3.1/Shader Graph Samples/Meshes/MaterialBall.prefab using Guid(7822020b9f9222c458b8de51cf8846ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de1d325be0300f5bf9c2b9fa4798a1fa') in 0.539045 seconds 
+  Import took 0.547829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/ZED/Examples/SpatialMapping/ZomShooter/Materials/FluffParticleMaterial.mat
+  artifactKey: Guid(01ffe1f3679a0894087ea5e74106fb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/SpatialMapping/ZomShooter/Materials/FluffParticleMaterial.mat using Guid(01ffe1f3679a0894087ea5e74106fb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e02080a9f03ffe509849669e428027b6') in 0.061745 seconds 
+  Import took 0.070682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000519 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/VarjoController/Materials/ControllerMaterial.mat
+  artifactKey: Guid(5b14d809baeeab2408cdcbe12707ca29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/VarjoController/Materials/ControllerMaterial.mat using Guid(5b14d809baeeab2408cdcbe12707ca29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd67fbd8b94e9a77d53afdac2d6d83326') in 0.598322 seconds 
+  Import took 0.607373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/Varjo_VR-1/Materials/VR1_Material.mat
+  artifactKey: Guid(754a31b04f53d524097b83e89828a7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/Varjo_VR-1/Materials/VR1_Material.mat using Guid(754a31b04f53d524097b83e89828a7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c30717871bd60b1236a1042e0b9ac1') in 0.189329 seconds 
+  Import took 0.202868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/Cube/Materials/Varjo_Material_MaskMap.png
+  artifactKey: Guid(fdfe27931abc49a47a5bdf7d2f94b680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/Cube/Materials/Varjo_Material_MaskMap.png using Guid(fdfe27931abc49a47a5bdf7d2f94b680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16d779c821d12f4d8b065bc2c19a85eb') in 0.187813 seconds 
+  Import took 0.200324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Varjo/Samples/Materials/ShadowOnlyMaterial.mat
+  artifactKey: Guid(06803d2e57c0d0c46b6a1cc5f1a49032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/ShadowOnlyMaterial.mat using Guid(06803d2e57c0d0c46b6a1cc5f1a49032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9febb4e2007b577f9297a750f90b891d') in 0.046788 seconds 
+  Import took 0.055055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Varjo/Samples/Materials/ReflectiveMaterial.mat
+  artifactKey: Guid(83f879a6484149a4ea2e479a93f3b2bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/ReflectiveMaterial.mat using Guid(83f879a6484149a4ea2e479a93f3b2bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16743f3cffa3c8bed3fae49e56c8016f') in 0.040275 seconds 
+  Import took 0.049448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/CubePhysicsMaterial.physicMaterial
+  artifactKey: Guid(80db55f78bd13a34e9822ef8dca5f47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/CubePhysicsMaterial.physicMaterial using Guid(80db55f78bd13a34e9822ef8dca5f47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e5277e049a21fd6131a1750265753e6') in 0.012352 seconds 
+  Import took 0.019926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000434 seconds.
+  path: Assets/ZED/Examples/Drone Shooter/Resources/Models/Gun/New Material.mat
+  artifactKey: Guid(da829dfe39480e24abbc80424e3b83dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/Drone Shooter/Resources/Models/Gun/New Material.mat using Guid(da829dfe39480e24abbc80424e3b83dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33af9ee60506fa43e5e41549814a9ad2') in 0.056710 seconds 
+  Import took 0.064660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Varjo/Samples/Materials/TransparentMaterial.mat
+  artifactKey: Guid(fa3f82ba3dfef5c4bbde9cee9791000c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/TransparentMaterial.mat using Guid(fa3f82ba3dfef5c4bbde9cee9791000c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6160ba19951e49a9288b5135f23ed8f0') in 0.062232 seconds 
+  Import took 0.071077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/ZED/Examples/SpatialMapping/ZomShooter/Materials/EyesMaterial.mat
+  artifactKey: Guid(51d14e0fd3936be48bf8d5031d3e24c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/SpatialMapping/ZomShooter/Materials/EyesMaterial.mat using Guid(51d14e0fd3936be48bf8d5031d3e24c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '614447b6e4993eebe7da63fa705379bd') in 0.061025 seconds 
+  Import took 0.070590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/Models/New Material.mat
+  artifactKey: Guid(6f7ea77716ad466408b3696d2cedf517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/New Material.mat using Guid(6f7ea77716ad466408b3696d2cedf517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da63d461deb1fc0bc57ae67f42ecfc9') in 0.027470 seconds 
+  Import took 0.035464 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/VarjoController/Materials/TouchpadTouchMaterial.mat
+  artifactKey: Guid(946e7ac5bca00664685b27df1281c7a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/VarjoController/Materials/TouchpadTouchMaterial.mat using Guid(946e7ac5bca00664685b27df1281c7a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5d421ca1990180a167273ce409b6dcd') in 0.034272 seconds 
+  Import took 0.042713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000418 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/Cube/Materials/Varjo_Material_BaseColor.png
+  artifactKey: Guid(a5dca5e1915d06f4aa8cfae448f39b99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/Cube/Materials/Varjo_Material_BaseColor.png using Guid(a5dca5e1915d06f4aa8cfae448f39b99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b0319c11481e4705fac922b0f614a9') in 0.108028 seconds 
+  Import took 0.121306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Samples/High Definition RP/7.3.1/Material Samples/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/High Definition RP/7.3.1/Material Samples/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b838e96c4c22a58f7cb6a2b6a4fa9f58') in 0.045453 seconds 
+  Import took 0.055345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000470 seconds.
+  path: Assets/Models/TrafficConeBase.fbx
+  artifactKey: Guid(41f669a161d5044c797ee22662ab492a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/TrafficConeBase.fbx using Guid(41f669a161d5044c797ee22662ab492a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f992f3a3372b6c88e90827086a9fad8') in 0.120969 seconds 
+  Import took 0.129709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/ZED/SDK/Helpers/Resources/PrefabsUI/Textures/Loading/HelveticaNeue Medium.ttf
+  artifactKey: Guid(f0347d4b40918f74aba41da870e47183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/SDK/Helpers/Resources/PrefabsUI/Textures/Loading/HelveticaNeue Medium.ttf using Guid(f0347d4b40918f74aba41da870e47183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66309f5767fd9d0ecd9990d73fa4f9d6') in 0.038244 seconds 
+  Import took 0.046713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000444 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/FlatMaterial.mat
+  artifactKey: Guid(4c2f562c660276d4ebe2968ee8cf1654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/FlatMaterial.mat using Guid(4c2f562c660276d4ebe2968ee8cf1654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67b1411b87ab33d65f1aea4c5c98dcd3') in 0.034034 seconds 
+  Import took 0.042154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000440 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Markers/Materials/MarkerMaterial.mat
+  artifactKey: Guid(a9ebe73def9c3f84fb334998edcb5f19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Markers/Materials/MarkerMaterial.mat using Guid(a9ebe73def9c3f84fb334998edcb5f19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e19b65eb82455dd71dbf24edd4baa766') in 0.037084 seconds 
+  Import took 0.045249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/ZED/Examples/Drone Shooter/Resources/Materials/New Material.mat
+  artifactKey: Guid(83c1f9c9f3d69a5469836df9064ff699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/Drone Shooter/Resources/Materials/New Material.mat using Guid(83c1f9c9f3d69a5469836df9064ff699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e83e66ea19eb804335156c1b71eaa08') in 0.027044 seconds 
+  Import took 0.035194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/GroundMaterial.mat
+  artifactKey: Guid(8a2e8fbd286a36f46bb9e715e9b3a5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/GroundMaterial.mat using Guid(8a2e8fbd286a36f46bb9e715e9b3a5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b002c427d85cec3a7afc2950237f8bda') in 0.607318 seconds 
+  Import took 0.624992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/Matte Material.mat
+  artifactKey: Guid(8b34afb7e5f2e3c48b707e710092530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/Matte Material.mat using Guid(8b34afb7e5f2e3c48b707e710092530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '155d75ec32c60a01d093b52989bbd0f0') in 0.033665 seconds 
+  Import took 0.042721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Samples/High Definition RP/7.3.1/Material Samples/Prefabs/MaterialBall.prefab
+  artifactKey: Guid(8074e7fc666caa04fa7389d4f6bcc8a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/High Definition RP/7.3.1/Material Samples/Prefabs/MaterialBall.prefab using Guid(8074e7fc666caa04fa7389d4f6bcc8a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a6e364d4901a786c218ae28d72e0eb6') in 0.481924 seconds 
+  Import took 0.490879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Samples/High Definition RP/7.3.1/Material Samples/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/High Definition RP/7.3.1/Material Samples/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d3e3e6c26fad155063f6d08372b702a') in 0.063425 seconds 
+  Import took 0.072492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/TransparentMaterial.mat
+  artifactKey: Guid(cf3fa869909a58647b29ed902753514e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/TransparentMaterial.mat using Guid(cf3fa869909a58647b29ed902753514e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f0be88f4428b871ddf6edc6b272c47b') in 5.886531 seconds 
+  Import took 5.894751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Samples/High Definition RP/7.3.1/Material Samples/Settings/Materials Samples Rendering Settings.asset
+  artifactKey: Guid(bcce1d882ad78594e96df95e83512585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/High Definition RP/7.3.1/Material Samples/Settings/Materials Samples Rendering Settings.asset using Guid(bcce1d882ad78594e96df95e83512585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5477ff79c8b9a4f1a4a4a1a59328c78') in 0.012128 seconds 
+  Import took 0.020186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Varjo/Samples/Materials/SkyboxMaterial.mat
+  artifactKey: Guid(5b891c90c5d605b49ba83580b1f51260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/SkyboxMaterial.mat using Guid(5b891c90c5d605b49ba83580b1f51260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1caeb054b7f18e6cb0ebfa048ed39b0') in 0.035333 seconds 
+  Import took 0.043874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/ZED/Examples/Drone Shooter/Resources/Projectile_FX/Projectil/New Material 1.mat
+  artifactKey: Guid(0128c4727d585b8469ff68455c917ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/Drone Shooter/Resources/Projectile_FX/Projectil/New Material 1.mat using Guid(0128c4727d585b8469ff68455c917ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f09acec4638e677f251be00488ef79f') in 0.065137 seconds 
+  Import took 0.074101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/Cube/Materials/Varjo_Material.mat
+  artifactKey: Guid(5d92c5b6d0fe6bd468b15e6a189dee72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Models/Cube/Materials/Varjo_Material.mat using Guid(5d92c5b6d0fe6bd468b15e6a189dee72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb0ff28efb2ce8127ea3a3cf5917dfec') in 0.148883 seconds 
+  Import took 0.167346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000379 seconds.
+  path: Assets/ZED/Examples/SpatialMapping/ZomShooter/Materials/ZombunnyMaterial.mat
+  artifactKey: Guid(90309a9ae07af7a4baf27031c594f369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/SpatialMapping/ZomShooter/Materials/ZombunnyMaterial.mat using Guid(90309a9ae07af7a4baf27031c594f369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '473c2a0fbefe15068ac92959401edfef') in 0.081872 seconds 
+  Import took 0.090615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000361 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/TeleportMaterial.mat
+  artifactKey: Guid(59de7b533327b914895e0660a4c6a262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/Shared/Materials/TeleportMaterial.mat using Guid(59de7b533327b914895e0660a4c6a262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdb7a58b82279ed4fa05b859546f3a77') in 0.033655 seconds 
+  Import took 0.041832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/MixedReality/Materials/MaskMaterial.mat
+  artifactKey: Guid(178e480aa313c554bb69760436bee2d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/MixedReality/Materials/MaskMaterial.mat using Guid(178e480aa313c554bb69760436bee2d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1001af1cdd487e23f9d1254214b713a6') in 0.033067 seconds 
+  Import took 0.041402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.327726 seconds.
+  path: Assets/ZED/Examples/SkeletonTracking/Ressources/Materials
+  artifactKey: Guid(8449f2fdd9aec2242bffb53eacd06253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/SkeletonTracking/Ressources/Materials using Guid(8449f2fdd9aec2242bffb53eacd06253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '614f17e002dee2217962bfcb8901be9f') in 0.007886 seconds 
+  Import took 0.016591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.974451 seconds.
+  path: Assets/ZED/Examples/SpatialMapping/Resources/Materials
+  artifactKey: Guid(10500ccbdc2f9cc418b2eeff6244dd99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/SpatialMapping/Resources/Materials using Guid(10500ccbdc2f9cc418b2eeff6244dd99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64559aaf712b3efb425b91b671c37214') in 0.002509 seconds 
+  Import took 0.011814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.436122 seconds.
+  path: Assets/ZED/Tools/Mixed Reality Calibration/Models/Materials
+  artifactKey: Guid(a7430bf263ac50547b78c17d3d716e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Tools/Mixed Reality Calibration/Models/Materials using Guid(a7430bf263ac50547b78c17d3d716e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ad3b1593a9ab95869d0c3973c2f3616') in 0.002502 seconds 
+  Import took 0.013975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.369677 seconds.
+  path: Assets/ZED/Examples/OpenCV ArUco Detection/Materials
+  artifactKey: Guid(7a8095b1bff32d943bf62c6abf893941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZED/Examples/OpenCV ArUco Detection/Materials using Guid(7a8095b1bff32d943bf62c6abf893941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '270c01ab46bfa7641222c562050e83c6') in 0.002047 seconds 
+  Import took 0.011010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.840059 seconds.
+  path: Assets/Varjo/Prefabs/VarjoCameraRig.prefab
+  artifactKey: Guid(3fae7923a8aec364bb24e25c4aa6f079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Prefabs/VarjoCameraRig.prefab using Guid(3fae7923a8aec364bb24e25c4aa6f079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea578965d35a93dee79bdc37fe36ddbf') in 0.011192 seconds 
+  Import took 0.019619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Varjo/Prefabs/VarjoLayer.prefab
+  artifactKey: Guid(d03275f72db02614f978793e8e55e55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Prefabs/VarjoLayer.prefab using Guid(d03275f72db02614f978793e8e55e55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d42c152f3b18b3079be7d769f7c544') in 0.008413 seconds 
+  Import took 0.016022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.283761 seconds.
+  path: Assets/Varjo/Samples/Materials/Controller.mat
+  artifactKey: Guid(e1642df459f36f241b114fead9915ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/Controller.mat using Guid(e1642df459f36f241b114fead9915ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e5e472ab61d6175734ffaa17bbb4ab') in 0.034073 seconds 
+  Import took 0.043291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/Varjo/Samples/Materials/SingleChannelUI.mat
+  artifactKey: Guid(33ba843537b905b4381777a702c0bfe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/SingleChannelUI.mat using Guid(33ba843537b905b4381777a702c0bfe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d25695244c099852da53b99a624f968') in 0.036569 seconds 
+  Import took 0.044865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Varjo/Samples/Materials/Object.mat
+  artifactKey: Guid(1de2a144bd044d543859fdcfba772e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/Object.mat using Guid(1de2a144bd044d543859fdcfba772e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f26f86a0aae5171608d2eb7eabf41a8') in 0.040817 seconds 
+  Import took 0.049377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000461 seconds.
+  path: Assets/Varjo/Samples/Materials/Ground.mat
+  artifactKey: Guid(ef8ffb2078843af44ad9d79d0cca7b08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/Ground.mat using Guid(ef8ffb2078843af44ad9d79d0cca7b08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643b35fefe863518f7fb4a908ade7276') in 0.036111 seconds 
+  Import took 0.044173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Varjo/Samples/Materials/WriteDepth.mat
+  artifactKey: Guid(4693fc305c65ddd4e903eef0333ab64a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Varjo/Samples/Materials/WriteDepth.mat using Guid(4693fc305c65ddd4e903eef0333ab64a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96f521a49b4a369a327fb64d311227ae') in 0.039160 seconds 
+  Import took 0.047758 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.703758 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.008963 seconds 
+  Import took 0.018899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.643533 seconds.
+  path: Assets/New Material.mat
+  artifactKey: Guid(c19873eaf66f4d04187bf475904479c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material.mat using Guid(c19873eaf66f4d04187bf475904479c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f35236c1ba0a770bc1f4b9ba527a3f') in 0.029859 seconds 
+  Import took 0.039704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000521 seconds.
+  path: Assets/SeeThroughMaterial.mat
+  artifactKey: Guid(5266c24553ffbfe47ad188ef8a26d323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeeThroughMaterial.mat using Guid(5266c24553ffbfe47ad188ef8a26d323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58bce58456febe238c92547fca859dc7') in 0.036120 seconds 
+  Import took 0.044662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 174.584052 seconds.
+  path: Assets/prius3dmodel.dae
+  artifactKey: Guid(991e951916e4bbf4bbe5d91ea884d1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/prius3dmodel.dae using Guid(991e951916e4bbf4bbe5d91ea884d1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0fe70dab46ac95dc07d29b4c7b6ac4c') in 2.377318 seconds 
+  Import took 2.396233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 117.400501 seconds.
+  path: Assets/SeeThroughMaterial.mat
+  artifactKey: Guid(5266c24553ffbfe47ad188ef8a26d323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeeThroughMaterial.mat using Guid(5266c24553ffbfe47ad188ef8a26d323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '000418d8849f9699671ecac90ecc8ac4') in 0.031135 seconds 
+  Import took 0.040704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.309759 seconds.
+  path: Assets/XR
+  artifactKey: Guid(5239301159c97e346a5b926e71c7cdb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR using Guid(5239301159c97e346a5b926e71c7cdb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dcb65bf89b396b0231b00bf1ac32515') in 0.007965 seconds 
+  Import took 0.017477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003832 seconds.
+  path: Assets/XR
+  artifactKey: Guid(5239301159c97e346a5b926e71c7cdb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR using Guid(5239301159c97e346a5b926e71c7cdb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dcb65bf89b396b0231b00bf1ac32515') in 0.001869 seconds 
+  Import took 0.009430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.483918 seconds.
+  path: Assets/Samples
+  artifactKey: Guid(4dea2ddca47bd2543bc656856f7752eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples using Guid(4dea2ddca47bd2543bc656856f7752eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37af6cb9a85ebbdc2b09063e926afb1c') in 0.007673 seconds 
+  Import took 0.016837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.474591 seconds.
+  path: Assets/Prefabs/CarTestCube.prefab
+  artifactKey: Guid(d8a32c6d11d8f99448db60eb55795092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/CarTestCube.prefab using Guid(d8a32c6d11d8f99448db60eb55795092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac018156be4f37d7d65817ae6f1f0589') in 0.041984 seconds 
+  Import took 0.051985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Prefabs/prius3dmodel.prefab
+  artifactKey: Guid(d0fd3cbd1aba9154d9dec604be15d8e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prius3dmodel.prefab using Guid(d0fd3cbd1aba9154d9dec604be15d8e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1206e2700bd8908e6d4a47bacdcced72') in 0.134174 seconds 
+  Import took 0.153136 seconds .
+
