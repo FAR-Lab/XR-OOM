@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 21.578125, g: 21.578125, b: 21.578125, a: 1}
+  m_IndirectSpecularColor: {r: 15.371506, g: 19.043549, b: 25.199646, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2773,7 +2773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513257000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 543450652027100349}
@@ -2793,7 +2793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ca453521862804a998abf522373f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 1
   ZedCameraTracker: {fileID: 525814719}
   VRHeadset: {fileID: 1366484987}
   VRWorldZero: {fileID: 1336644502}

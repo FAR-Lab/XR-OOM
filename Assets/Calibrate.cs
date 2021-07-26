@@ -6,7 +6,7 @@ public class Calibrate : MonoBehaviour
 {
 
 
-    public float height = 0;
+   // public float height = 0;
     private bool ReadyForCalibration=false;
     private bool calibrationFinished = false;
 
@@ -37,6 +37,7 @@ public class Calibrate : MonoBehaviour
         if (ZedCameraTracker != null)
         {
             zedManager = ZedCameraTracker.GetComponent<ZEDManager>();
+            CarHeight = -(zedManager.transform.position.y - transform.position.y);
         }
 
     }
@@ -55,7 +56,7 @@ public class Calibrate : MonoBehaviour
             if (zedManager.ZEDTrackingState == sl.TRACKING_STATE.TRACKING_OK)
             {
                 ReadyForCalibration = true;
-                CarHeight = transform.position.y;
+               // CarHeight = transform.position.y;
                 transform.parent = zedManager.transform;
             }
             
@@ -70,11 +71,20 @@ public class Calibrate : MonoBehaviour
                 VRWorldZero.transform.parent = transform;
 
             }
-            else if(Input.GetKeyDown(KeyCode.Z) && calibrationFinished)
+            else if(Input.GetKey(KeyCode.Z) && calibrationFinished)
             {
-                CarToXRYaw = VRHeadset.rotation.eulerAngles.y - CallibrationPosition.rotation.eulerAngles.y;
-
-                VRWorldZero.RotateAround(VRWorldZero.transform.position,Vector3.up,CarToXRYaw);
+                // CarToXRYaw = VRHeadset.rotation.eulerAngles.y - CallibrationPosition.rotation.eulerAngles.y;
+                CarToXRYaw = Vector3.Angle(VRHeadset.forward, CallibrationPosition.forward);
+               
+                if(Vector3.Cross(VRHeadset.forward, CallibrationPosition.forward).y<0)
+                {
+                    CarToXRYaw = -CarToXRYaw;
+                }
+                
+                Debug.Log(CarToXRYaw);
+                Debug.DrawRay(VRHeadset.position,VRHeadset.forward,Color.green,10f);
+                Debug.DrawRay(CallibrationPosition.position, CallibrationPosition.forward, Color.red, 10f);
+                VRWorldZero.RotateAround(VRWorldZero.transform.position,Vector3.up,CarToXRYaw/10);
             }
         }
 
