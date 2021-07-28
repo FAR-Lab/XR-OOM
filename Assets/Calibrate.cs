@@ -74,17 +74,21 @@ public class Calibrate : MonoBehaviour
             else if(Input.GetKey(KeyCode.Z) && calibrationFinished)
             {
                 // CarToXRYaw = VRHeadset.rotation.eulerAngles.y - CallibrationPosition.rotation.eulerAngles.y;
-                CarToXRYaw = Vector3.Angle(VRHeadset.forward, CallibrationPosition.forward);
+                Vector3 HeadsetForward = new Vector3(VRHeadset.forward.x,0,VRHeadset.forward.z);
+                Vector3 CallibForward = new Vector3(CallibrationPosition.forward.x, 0, CallibrationPosition.forward.z);
+
+
+                CarToXRYaw = Vector3.Angle(HeadsetForward, CallibForward);
                
-                if(Vector3.Cross(VRHeadset.forward, CallibrationPosition.forward).y<0)
+                if(Vector3.Cross(HeadsetForward, CallibForward).y<0)
                 {
-                    CarToXRYaw = -CarToXRYaw;
+                   CarToXRYaw = -CarToXRYaw;
                 }
                 
                 Debug.Log(CarToXRYaw);
                 Debug.DrawRay(VRHeadset.position,VRHeadset.forward,Color.green,10f);
                 Debug.DrawRay(CallibrationPosition.position, CallibrationPosition.forward, Color.red, 10f);
-                VRWorldZero.RotateAround(VRWorldZero.transform.position,Vector3.up,CarToXRYaw/10);
+                VRWorldZero.RotateAround(VRWorldZero.position,Vector3.up,CarToXRYaw/10F);
             }
         }
 
