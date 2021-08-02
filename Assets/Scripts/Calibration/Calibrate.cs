@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using sl;
+[RequireComponent(typeof(ConfigFileLoading))]
 public class Calibrate : MonoBehaviour
 {
 
@@ -18,6 +19,10 @@ public class Calibrate : MonoBehaviour
     private Vector3 CarToXROffset;
     private float CarToXRYaw;
 
+    
+    //
+    public bool LoadOffset = false;
+    public bool StoreOffset = false;
     /// <summary>
     /// Relative to the world car<>world
     /// </summary>
@@ -30,6 +35,7 @@ public class Calibrate : MonoBehaviour
 
     private ZEDManager zedManager;
 
+    private ConfigFileLoading conf;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +45,8 @@ public class Calibrate : MonoBehaviour
             zedManager = ZedCameraTracker.GetComponent<ZEDManager>();
             CarHeight = -(zedManager.transform.position.y - transform.position.y);
         }
+
+        conf = GetComponent<ConfigFileLoading>();
 
     }
 
@@ -92,7 +100,25 @@ public class Calibrate : MonoBehaviour
             }
         }
 
-
+        if (LoadOffset)
+        {
+            if (conf.ReadyToLoad)
+            {
+                LoadOffset = false;
+                conf.LoadLocalOffset(out Vector3 pos,out Quaternion rot);
+                VRWorldZero.transform.localPosition = pos;
+                VRWorldZero.transform.localRotation = rot;
+            }
+        }
+        if (StoreOffset)
+        {
+            if (conf.ReadyToLoad)
+            {
+                StoreOffset = false;
+                var transform1 = VRWorldZero.transform;
+                conf.StoreLocalOffset(transform1.localPosition,transform1.localRotation);
+            }
+        }
     }
     private void LateUpdate()
     {

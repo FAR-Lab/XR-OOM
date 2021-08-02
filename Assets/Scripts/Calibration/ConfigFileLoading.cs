@@ -12,9 +12,16 @@ public class ConfigFileLoading : MonoBehaviour
     private string m_path;
     private char m_seperator = '\t';
     // Start is called before the first frame update
+    
+    private bool ready;
+    public bool ReadyToLoad
+    {
+        get { return ready; }
+    }
     void Start()
     {
         m_path = Application.persistentDataPath + OffsetFileName;
+        ready = true;
     }
 
     // Update is called once per frame
