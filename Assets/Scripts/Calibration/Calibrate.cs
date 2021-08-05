@@ -103,10 +103,16 @@ public class Calibrate : MonoBehaviour
         {
             if (conf.ReadyToLoad)
             {
+                if (!calibrationFinished)
+                {
+                    calibrationFinished = true;
+                    VRWorldZero.transform.parent = transform;
+                }
                 LoadOffset = false;
                 conf.LoadLocalOffset(out Vector3 pos,out Quaternion rot);
                 VRWorldZero.transform.localPosition = pos;
                 VRWorldZero.transform.localRotation = rot;
+               
             }
         }
         if (StoreOffset)
