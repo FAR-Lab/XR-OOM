@@ -36,7 +36,6 @@ public class Calibrate : MonoBehaviour
     private ZEDManager zedManager;
 
     private ConfigFileLoading conf;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +46,7 @@ public class Calibrate : MonoBehaviour
         }
 
         conf = GetComponent<ConfigFileLoading>();
-
+      
     }
 
     public void MoveGameObject()
@@ -129,4 +128,5 @@ public class Calibrate : MonoBehaviour
         }
     }
 }
+
 
