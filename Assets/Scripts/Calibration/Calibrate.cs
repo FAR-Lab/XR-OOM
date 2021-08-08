@@ -31,7 +31,7 @@ public class Calibrate : MonoBehaviour
     public Transform VRHeadset;
     public Transform VRWorldZero;
     public Transform CallibrationPosition; // SHould be on the center arm rest
-
+    public float CallibrationTimmer = -1;
 
     private ZEDManager zedManager;
 
@@ -60,10 +60,12 @@ public class Calibrate : MonoBehaviour
 
         if (!ReadyForCalibration)
         {
-            if (zedManager.ZEDTrackingState == sl.TRACKING_STATE.TRACKING_OK)
+            if (zedManager.ZEDTrackingState == sl.TRACKING_STATE.TRACKING_OK && CallibrationTimmer < 1.0f)
             {
+                CallibrationTimmer += Time.deltaTime;
+            }
+            else if(zedManager.ZEDTrackingState == sl.TRACKING_STATE.TRACKING_OK && CallibrationTimmer >= 1.0f){
                 ReadyForCalibration = true;
-               // CarHeight = transform.position.y;
                 transform.parent = zedManager.transform;
             }
             
